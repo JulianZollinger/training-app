@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0f14">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Training">
+  <title>Training</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+  <header class="top">
+    <div>
+      <div id="subtitle" class="subtitle"></div>
+      <h1 id="title" class="title">Training</h1>
+    </div>
+    <div class="top-actions">
+      <select id="weeks" aria-label="Zeitraum" hidden>
+        <option value="4">4 Wo.</option><option value="8" selected>8 Wo.</option>
+        <option value="12">12 Wo.</option><option value="26">26 Wo.</option><option value="52">52 Wo.</option>
+      </select>
+      <button id="btnSettings" class="round" aria-label="Einstellungen">⚙</button>
+    </div>
+  </header>
+  <div id="seg" class="seg" role="tablist"></div>
+
+  <main>
+    <div id="error" class="error" role="alert" hidden></div>
+    <div id="info" class="info" hidden></div>
+    <p id="loading">Lade Daten …</p>
+    <div id="views">
+      <section id="today" class="view" hidden></section>
+      <section id="calendar" class="view" hidden></section>
+      <section id="list" class="view" hidden></section>
+      <section id="compare" class="view" hidden></section>
+      <section id="records" class="view" hidden></section>
+      <section id="timer" class="view" hidden></section>
+      <section id="overview" class="view" hidden></section>
+      <section id="fitness" class="view" hidden></section>
+      <section id="goals" class="view" hidden></section>
+      <section id="sleep" class="view" hidden></section>
+      <section id="recovery" class="view" hidden></section>
+      <section id="vo2" class="view" hidden></section>
+      <section id="body" class="view" hidden></section>
+      <section id="coach" class="view" hidden></section>
+      <section id="insights" class="view" hidden></section>
+      <section id="assistant" class="view" hidden></section>
+      <section id="gear" class="view" hidden></section>
+      <section id="streak" class="view" hidden></section>
+    </div>
+  </main>
+
+  <nav id="bottomNav" class="bottom" aria-label="Hauptnavigation"></nav>
+
+  <dialog id="detail">
+    <h2 id="dTitle"></h2>
+    <div id="dInfo" class="detail-grid"></div>
+    <label for="note">Meine Notiz</label>
+    <textarea id="note" rows="4" placeholder="Wie hat es sich angefühlt?"></textarea>
+    <div class="row"><button id="saveNote" class="primary">Speichern</button><button id="closeDetail" class="secondary">Schliessen</button></div>
+    <p id="saved" class="hint"></p>
+  </dialog>
+  <dialog id="settings"></dialog>
+
+  <script src="config.js" onerror="void 0"></script>
+  <script src="data.js"></script>
+  <script src="charts.js"></script>
+  <script src="coach.js"></script>
+  <script src="insights.js"></script>
+  <script src="ui2.js"></script>
+  <script src="features.js"></script>
+  <script src="app.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

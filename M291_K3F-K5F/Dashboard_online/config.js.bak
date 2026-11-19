@@ -1,0 +1,2 @@
+// Leer: Schluessel und Athlete-ID traegst du in der App unter Einstellungen ein.
+window.CONFIG = { API_KEY: "", ATHLETE_ID: "" };
